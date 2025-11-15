@@ -1,0 +1,84 @@
+.contact-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.contact-logo img {
+    width: 100px;
+    border-radius: 50%;
+}
+body {
+    background: url('blue-color-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+.contact-section {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(10,35,66,0.10);
+    padding: 40px 32px;
+    animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1);
+}
+.contact-section h2 {
+    color: #0078d7;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #222;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border 0.2s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border: 1.5px solid #0078d7;
+    outline: none;
+}
+.contact-form button {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #005fa3;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 28px;
+    color: #555;
+    font-size: 1.05rem;
+}
+.contact-info a {
+    color: #0078d7;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Optional animation for fadeInDown */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: none;}
+}
