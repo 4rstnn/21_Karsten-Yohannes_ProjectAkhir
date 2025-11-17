@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* use the wallpaper image as the page background (with subtle overlay for readability) */
+    background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url('blue-color-wallpaper.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    animation: slideInDown 0.6s ease-out;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background: var(--primary);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    box-shadow: 0 8px 32px 0 rgba(6, 2, 90, 0.703);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.full {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    flex: 1;
+    animation: slideInUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.full h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    animation: slideInUp 0.6s ease-out 0.2s both;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table thead tr {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+table tbody tr:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+    box-shadow: -4px 0 8px rgba(102, 126, 234, 0.1);
+}
+
+table td {
+    padding: 15px;
+    color: #333;
+}
+
+table a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+table a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.add-button a {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    animation: slideInUp 0.6s ease-out 0.4s both;
+}
+
+.add-button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+    font-weight: 600;
+    animation: slideInUp 0.6s ease-out 0.6s both;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .full {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    .add-button a {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}

@@ -1,0 +1,214 @@
+
+:root{
+    --accent1: #667eea;
+    --accent2: #764ba2;
+    --panel-bg: rgba(255,255,255,0.95);
+    --overlay: rgba(0,0,0,0.06);
+    --text: #333;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Page background - match Planner_Eventhome.css */
+body{
+    
+    background: url('blue-color-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover ;
+
+
+}
+
+header {
+    animation: slideInDown 0.6s ease-out;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background: var(--primary);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    box-shadow: 0 8px 32px 0 rgba(6, 2, 90, 0.703);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Main form panel - matches home page card style */
+.form-container,
+.full {
+    width: 100%;
+    max-width: 900px;
+    background: var(--panel-bg);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 36px;
+    box-shadow: 0 12px 40px rgba(31,38,135,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+    animation: slideInUp 0.6s ease-out 0.05s both;
+    margin: 12px auto;
+}
+
+/* Form header */
+.form-container h1 {
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+
+
+
+
+.form-group input,
+.form-group textarea,
+.inbox,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid #e6e6e6;
+    font-size: 15px;
+    background: #fff;
+    color: #222;
+    transition: all .18s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.inbox:focus {
+    outline: none;
+    border-color: var(--accent1);
+    box-shadow: 0 6px 18px rgba(102,126,234,0.08);
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+button[type="submit"],
+input[type="submit"],
+.btn-upload {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease;
+    box-shadow: 0 6px 20px rgba(102,126,234,0.18);
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.btn-upload:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102,126,234,0.22);
+}
+
+/* Back link (consistent with home) */
+.back-link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.back-link a {
+    color: var(--accent1);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer positioning similar to other pages */
+footer {
+    margin-top: auto;
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+    .navbar { padding: 12px 16px; margin-bottom: 14px; }
+    .form-container { padding: 20px; margin: 10px; }
+    button[type="submit"], input[type="submit"] { width: 100%; }
+}
+
+/* Animations (same timing and names used site-wide) */
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-28px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(28px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
